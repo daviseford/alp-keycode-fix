@@ -14,6 +14,10 @@
 
 
 $(document).ready(function() {
+	$("#linkResults").hide(); //Sloppily hiding these two divs.
+	$("#productLinks").hide();
+	
+	
 	
 	//Setting up the keycode-generating menus
     $("#list").selectmenu({width:100}); 
@@ -23,7 +27,6 @@ $(document).ready(function() {
 	
 	//Establishing the datepicker
 	$( "#inlinedate" ).datepicker({
-		showAnim: "fold",
 		dateFormat: "ymmdd" //Outputs as YYMMDD
 		});
 	
@@ -36,19 +39,19 @@ $(document).ready(function() {
 		$("#email").val(), 
 		$("#product").val()	]; //This array stores our Keycode values, to be used shortly.
 		
-		var printKey = keycodeGeneration[0]+keycodeGeneration[1]+keycodeGeneration[2]+keycodeGeneration[3];
-		console.log(keycodeGeneration); //Debugging
-		$("#submitKeycode").button({label: "Keycode Generated!"}); //Change button to relfect generation
-		$("#keycodeOutput").text("Generated Keycode: "+printKey);
-		$("#keycodefield").val(printKey);
+		console.log(keycodeGeneration.join("")); //Debugging
+		$("#submitKeycode").button({label: "Keycode Generated!"}); //Change button to reflect generation
+		$("#keycodeOutput").text("Generated Keycode: "+keycodeGeneration.join(""));
+		$("#keycodefield").val(keycodeGeneration.join(""));
+		
+		var x = $.trim(document.getElementById(keycodeGeneration[3]).value); 
+		//This grabs the element with the Product Code. 
+		//For example - if keycodeGeneration[3] = SUB, this grabs the value of "#SUB", which is the link to the product
+		console.log(x); //Debugging
+		$("#ProductInput").val(x); //Sets up our product link in the "#inputForm"
 	});
   
   
-  
-  
-  
-	$("#linkResults").hide(); //Sloppily hiding these two divs.
-	$("#productLinks").hide();
 	
 	//start checking for valid input
 	$("#inputForm").submit(function() {
@@ -57,12 +60,14 @@ $(document).ready(function() {
 			alert("You must enter a keycode value! That's the whole reason you're here, right?");
 		} 
 		else {
-			if($("#link1").val() == "") {
+			if($("#link1").val() == "" && $("#ProductInput").val() == "") {
 				alert("You must enter at least one link! That's pretty obvious, at least to my primitive computer brain.");
 			}
 			else {
 			$("#linkResults").show();
 			$("#productLinks").show();
+			
+			
 			var keycode = $.trim($("#keycodefield").val());
 			
 			//This pulls the whole UTM code together, being careful to trim the keycode of stray spaces
@@ -95,7 +100,9 @@ $(document).ready(function() {
 			
 			//Below, we print the first link, and then check the other inputs for value.
 			//If the input has something, it is processed. Otherwise, it's left alone.
-			$("#Link1Results").val($("#link1").val()+utmsource);
+			if($("#link1").val() != "") {
+				$("#Link1Results").val($("#link1").val()+utmsource);
+			} 
 			if($("#link2").val() != "") {
 				$("#Link2Results").val($("#link2").val()+utmsource);
 			} 
@@ -107,6 +114,9 @@ $(document).ready(function() {
 			}
 			if($("#link5").val() != "") {
 				$("#Link5Results").val($("#link5").val()+utmsource);
+			}
+			if($("#ProductInput").val() != "") {
+				$("#ProductOutput").val($("#ProductInput").val()+utmsource);
 			}
 			}
 		}
