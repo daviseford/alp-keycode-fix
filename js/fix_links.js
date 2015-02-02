@@ -41,7 +41,7 @@ $(document).ready(function() {
 		
 		console.log(keycodeGeneration.join("")); //Debugging
 		$("#submitKeycode").button({label: "Keycode Generated!"}); //Change button to reflect generation
-		$("#keycodeOutput").text("Generated Keycode: "+keycodeGeneration.join(""));
+		$("#keycodeOutput").removeClass("alert-danger").addClass("alert-success").text("Generated Keycode: "+keycodeGeneration.join(""));
 		$("#keycodefield").val(keycodeGeneration.join(""));
 		
 		var x = $.trim(document.getElementById(keycodeGeneration[3]).value); 
