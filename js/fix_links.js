@@ -14,9 +14,44 @@
 
 
 $(document).ready(function() {
+	
+	//Setting up the keycode-generating menus
+    $("#list").selectmenu({width:100}); 
+    $("#email").selectmenu({width:175});
+    $("#product").selectmenu();
+	$("#submitKeycode").button();
+	
+	//Establishing the datepicker
+	$( "#inlinedate" ).datepicker({
+		showAnim: "fold",
+		dateFormat: "ymmdd" //Outputs as YYMMDD
+		});
+	
+  
+  	$("#keycodeForm").submit(function() {
+		event.preventDefault(); //Stops the page from reloading
+		keycodeGeneration = [
+		$("#inlinedate").val(), 
+		$("#list").val(), 
+		$("#email").val(), 
+		$("#product").val()	]; //This array stores our Keycode values, to be used shortly.
+		
+		var printKey = keycodeGeneration[0]+keycodeGeneration[1]+keycodeGeneration[2]+keycodeGeneration[3];
+		console.log(keycodeGeneration); //Debugging
+		$("#submitKeycode").button({label: "Keycode Generated!"}); //Change button to relfect generation
+		$("#keycodeOutput").text("Generated Keycode: "+printKey);
+		$("#keycodefield").val(printKey);
+	});
+  
+  
+  
+  
+  
 	$("#linkResults").hide(); //Sloppily hiding these two divs.
 	$("#productLinks").hide();
-	$("form").submit(function() {
+	
+	//start checking for valid input
+	$("#inputForm").submit(function() {
 		event.preventDefault();
 		if($("#keycodefield").val() == ""){
 			alert("You must enter a keycode value! That's the whole reason you're here, right?");
@@ -47,8 +82,15 @@ $(document).ready(function() {
 					if(S(stmlCheck).contains('.stml')) {
 						var splitSTML = $.trim($(this).val().split('.stml')[0]);
 						$(this).val(splitSTML+".stml");	
-						console.log("Fixed string with stmlCheck)")
+						console.log("Fixed string with stmlCheck")
 						}
+						
+				var htmlCheck = $.trim($(this).val())
+					if(S(htmlCheck).contains('.html')) {
+						var splitHTML = $.trim($(this).val().split('.html')[0]);
+						$(this).val(splitHTML+".html");	
+						console.log("Fixed string with htmlCheck")
+						}		
 			});
 			
 			//Below, we print the first link, and then check the other inputs for value.
