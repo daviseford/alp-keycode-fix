@@ -85,25 +85,61 @@
            </fieldset>
            <input type="submit" value="Generate Keycode" id="submitKeycode">
 		</form>
-          <img src="images/Untitled-2.png" width="285" height="127">    		</div>
+          <img src="images/Untitled-2.png" width="285" height="127">    		
+          </div>
        </div>
       
       
-      <div class="container-fluid"><center>The above generator is not necessary, but you'll probably want to use it</center>
+      <div class="container-fluid">
+      	<center>The above generator is not necessary, but you'll probably want to use it</center>
       </div>
+      
       <div class="row">
         <div class="col-md-8">        
         	<h2>Paste your links here</h2>
       		<p>Assemble your keycode above, or manually type it here. Add any links that you would like to add tracking codes to, and click &quot;Submit.&quot;</p>
+            
       
         	<form id="inputForm">
-				Keycode: <input type="text" name="keycode" id="keycodefield"> <span id="keycodeOutput" class="alert-danger">Generate a keycode above and it will appear here.</span><br>
-				Link #1: <input type="text" name="link1" id="link1" size="75"> <br>
-				Link #2: <input type="text" name="link2" id="link2" size="75"> <br>
-                Link #3: <input type="text" name="link3" id="link3" size="75"> <br>
-                Link #4: <input type="text" name="link4" id="link4" size="75"> <br>
-                Link #5: <input type="text" name="link5" id="link5" size="75"> <br>
-                Product: <input type="text" name="link6" id="ProductInput" size="75"> <br><br>
+				<div class="form-group">
+				<label for="keycodefield">Keycode: </label>
+                <input type="text" name="keycode" id="keycodefield"> 
+                	<span id="keycodeOutput" class="alert-danger">
+                		Generate a keycode above and it will appear here.
+                	</span>
+                </div>
+                               
+				<div class="form-group">
+					<label for="link1">Link #1: </label>
+                	<input type="text" name="link1" id="link1" size="75">
+                </div>
+                
+				<div class="form-group">
+					<label for="link2">Link #2: </label>
+                	<input type="text" name="link2" id="link2" size="75"> 
+                </div>
+                
+                <div class="form-group">
+					<label for="link3">Link #3: </label>
+                	<input type="text" name="link3" id="link3" size="75"> 
+                </div>
+                
+                <div class="form-group">
+					<label for="link4">Link #4: </label>
+                	<input type="text" name="link4" id="link4" size="75"> 
+                </div>
+                
+                <div class="form-group">
+					<label for="link5">Link #5: </label>
+                	<input type="text" name="link5" id="link5" size="75"> 
+                </div>
+                
+                <div class="form-group">
+					<label for="ProductInput">Product: </label>
+                	<input type="text" name="link6" id="ProductInput" size="75"> 
+                </div>
+                
+                <br>
 				<input type="submit" value="submit" id="submitlinks">
 			</form> 
 		</div>
@@ -113,21 +149,46 @@
           <p>You must input a Keycode and at least one link for this tool to work.</p>
           <p>Keycode Format: (Date)(List)(Email)(Product)</p>
           <p>If you manage to break something, tell me about it in #wjmasupport</p>
+          <p>This page will automatically strip offending links of tracking codes, session data, etc.</p>
         </div>
       </div>
 
       <div class="row" id="linkResults">
         <div class="col-md-8">
         	<form id="results">
-				Link #1: <input type="text" id="Link1Results" size="75"><br />
-				Link #2: <input type="text" id="Link2Results" size="75"><br />
-				Link #3: <input type="text" id="Link3Results" size="75"><br />
-				Link #4: <input type="text" id="Link4Results" size="75"><br />
-				Link #5: <input type="text" id="Link5Results" size="75"><br />
-                Product: <input type="text" id="ProductOutput" size="75"><br />
+            	<div class="form-group">
+				<label for="Link1Results">Link #1: </label>
+                <input type="text" id="Link1Results" size="75">
+                </div>
+                
+                <div class="form-group">
+                <label for="Link2Results">Link #2: </label>
+				<input type="text" id="Link2Results" size="75">
+                </div>
+                
+                <div class="form-group">
+                <label for="Link3Results">Link #3: </label>
+				<input type="text" id="Link3Results" size="75">
+                </div>
+                
+                <div class="form-group">
+                <label for="Link4Results">Link #4: </label>
+				<input type="text" id="Link4Results" size="75">
+                </div>
+                
+                <div class="form-group">
+                <label for="Link5Results">Link #5: </label>
+				<input type="text" id="Link5Results" size="75">
+                </div>
+                
+                <div class="form-group">
+                <label for="ProductOutput">Product: </label>
+                <input type="text" id="ProductOutput" size="75">
+                </div>
+                
 			</form>
 		</div>
-        <div class="col-md-4"><h4>These are your results.<h4>
+        <div class="col-md-4"><h4 align="center">These are your results.<h4>
         </div>
       </div>
 
@@ -135,29 +196,66 @@
         <div class="col-md-12">
         <center><p>If you need links to products, please check below!</p></center>
          <form id="productForm">
-        	Ultimate Self Reliance Mega Manual<input type="text" id="USR" name="1" value="http://www.independentlivingnews.com/video/usr-video-3p.php" size="50"><br>
+         	<div class="input-group">
+         	<span class="input-group-addon" id="addon1">Ultimate Self Reliance Mega Manual</span>
+            <input type="text" id="USR" name="1" value="http://www.independentlivingnews.com/video/usr-video-3p.php" size="50" class="form-control" aria-describedby="addon1">
+            </div>
             
-			Great American Blackout<input type="text" name="2" id="GAB" value="http://www.independentlivingnews.com/il/great-american-blackout.php" size="50"><br>
+            <div class="input-group">
+            <span class="input-group-addon" id="addon2">Great American Blackout</span>
+            <input type="text" name="2" id="GAB" class="form-control" aria-describedby="addon2" value="http://www.independentlivingnews.com/il/great-american-blackout.php" size="50">
+            </div>
             
-			Digital Newsletter Subscription<input type="text" name="3"  id="SUB" value="http://www.independentlivingnews.com/instant-access/digital-self-reliance-newsletter.stml" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon3">Digital Newsletter Subscription</span>
+            <input type="text" name="3" class="form-control" aria-describedby="addon3" id="SUB" value="http://www.independentlivingnews.com/instant-access/digital-self-reliance-newsletter.stml" size="50">
             
-			Power Whisperer<input type="text" name="4" id="PW" value="http://www.independentlivingnews.com/video/pw-vsl.php" size="50"><br>
+            </div>
             
-			30 Day Emergency Food Reserve<input type="text" name="5" id="FOOD" value="http://www.independentlivingnews.com/video/comfort-food-reserve.php" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon4">Power Whisperer</span>
+            <input type="text" name="4" class="form-control" aria-describedby="addon4" id="PW" value="http://www.independentlivingnews.com/video/pw-vsl.php" size="50">
+            </div>
             
-			Colloidal Silver Generator Kit<input type="text" name="6" id="CSG" value="https://www.independentlivingnews.com/video/csg-video.php" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon5">30 Day Emergency Food Reserve</span>
+            <input type="text" name="5" class="form-control" aria-describedby="addon5" id="FOOD" value="http://www.independentlivingnews.com/video/comfort-food-reserve.php" size="50">
+            </div>
             
-			Gun Control Poll<input type="text" name="7" id="GUN" value="http://www.independentlivingnews.com/poll/gun-control/poll.php" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon6">Colloidal Silver Generator Kit</span>
+            <input type="text" name="6" class="form-control" aria-describedby="addon6" id="CSG" value="https://www.independentlivingnews.com/video/csg-video.php" size="50">
+            </div>
             
-			Low Profile Living Manual<input type="text" id="LPL" name="8"  value="http://www.independentlivingnews.com/video/lpl-video.php" size="50">	<br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon7">Gun Control Poll</span>
+            <input type="text" name="7" class="form-control" aria-describedby="addon7" id="GUN" value="http://www.independentlivingnews.com/poll/gun-control/poll.php" size="50">
+            </div>
             
-			97 Covert Tactics to Sidestep Obama Dollar Debacle<input type="text" name="9" id="ODD" value="http://www.independentlivingnews.com/il/obama-dollar-debacle.php" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon8">Low Profile Living Manual</span>
+            <input type="text" id="LPL" class="form-control" aria-describedby="addon8" name="8"  value="http://www.independentlivingnews.com/video/lpl-video.php" size="50">
+            </div>
             
-			Emergency Pack<input type="text" name="10" id="EPACK"  value="http://www.independentlivingnews.com/video/epack2-video.php" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon9">97 Covert Tactics to Sidestep Obama Dollar Debacle</span>
+            <input type="text" name="9" class="form-control" aria-describedby="addon9" id="ODD" value="http://www.independentlivingnews.com/il/obama-dollar-debacle.php" size="50">
+            </div>
             
-			Sun Trek<input type="text" name="11" id="STREK" value="http://www.independentlivingnews.com/video/suntrek/" size="50"><br>
+            <div class="input-group">
+			<span class="input-group-addon" id="addon10">Emergency Pack</span>
+            <input type="text" name="10" class="form-control" aria-describedby="addon10" id="EPACK"  value="http://www.independentlivingnews.com/video/epack2-video.php" size="50">
+            </div>
             
-            Medical Self Reliance<input type="text" name="12" id="MSR" value="http://www.survivalproshop.com/publications/medical-self-reliance-mega-manual.html" size="50">
+            <div class="input-group">
+			<span class="input-group-addon" id="addon11">Sun Trek</span>
+            <input type="text" name="11" class="form-control" aria-describedby="addon11" id="STREK" value="http://www.independentlivingnews.com/video/suntrek/" size="50">
+            </div>
+            
+            <div class="input-group">
+            <span class="input-group-addon" id="addon12">Medical Self Reliance</span>
+            <input type="text" name="12" class="form-control" aria-describedby="addon12" id="MSR" value="http://www.survivalproshop.com/publications/medical-self-reliance-mega-manual.html" size="50">
+            </div>
             
             </form>
         </div>
