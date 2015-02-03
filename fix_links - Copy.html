@@ -36,42 +36,34 @@
         <h1>ALP Link Checker</h1>
       </div>
       
-      <!--
-      Instructions
-      -->
       <div class="row">
-      <div class="col-lg-3"><center>STEP 1</center></div>
-      <div class="col-lg-2"><center>STEP 2</center></div>   
-      <div class="col-lg-2"><center>STEP 3</center></div>  
-      <div class="col-lg-5"><center>STEP 4</center></div>
-      </div>
-      
-      <div class="row">
-       <div class="col-lg-3" id="inlinedate"></div>
-          <div class="col-lg-2">    
-          <center>  
-          <form id="keycodeForm" action="#">
-  			<fieldset>
-  				<label for="list">Select a List</label><br>
+      <div class="col-md-5 bg-info">
+        <h2>Keycode Generator</h2>
+        <div class="row">
+        	<div class="col-md-5">  
+          		<form id="keycodeForm">
+  					<fieldset>
+  						<label for="list">Select a List</label><br>
     				<select name="list" id="list">
         				<option value="ILN" selected="selected">ILN</option>
         				<option value="RFAR">RFAR</option>
    				 	</select>
-                    </center>
-          </div>
-          <div class="col-lg-2">
-          	<center>
-   			<label for="email">Select an Email</label><br>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="email">Select an Email</label><br>
     			<select name="email" id="email">
         			<option value="DB" selected="selected">Daily Bulletin</option>
         			<option value="SL">Sales Letter</option>
         			<option value="MR">Must Read</option>
     			</select>
-            </center>
-    		</div>
-    		<div class="col-lg-5">
-            <center>
-    		<label for="product">Select a Product</label><br>
+        </div>
+        <div class="col-md-7"  id="inlinedate"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+        <br>
+        <label for="product">Select a Product</label><br>
     			<select name="product" id="product">
       				<option value="USR">Ultimate Self Reliance Mega Manual</option>
       				<option value="GAB">Great American Blackout</option>
@@ -86,22 +78,18 @@
                     <option value="CAN">Survival Kit in a Can</option>
                     <option value="FFL">Freedom Fortress Library</option>
       		    </select>
+        </div>
+        </div>
+        <br>
            </fieldset>
-           </center>
+           <br>
            <br>
            <input type="submit" value="Generate Keycode" id="submitKeycode">
-		</form>
-          <img src="images/Untitled-2.png" width="285" height="127" style="padding-left:20px;">    		
-          </div>
-       </div>
+		</form>  
+        </div>
       
       
-      <div class="container-fluid">
-      	<center>The above generator is not necessary, but you'll probably want to use it</center>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">        
+        <div class="col-md-7">        
         	<h2>Paste your links here</h2>
       		<p>Assemble your keycode above, or manually type it here. Add any links that you would like to add tracking codes to, and click &quot;Submit.&quot;</p>
             
@@ -150,14 +138,6 @@
 				<img src="images/click_to_link.png" width="373" height="62">
 			</form> 
 		</div>
-        <div class="col-md-4">
-          <h2>Instructions</h2>
-          <p class="text-warning">This script requires a valid keycode. It will not stop you from doing stupid things like bad links, blank spaces, etc. It is very basic.</p>
-          <p>You must input a Keycode and at least one link for this tool to work.</p>
-          <p>Keycode Format: (Date)(List)(Email)(Product)</p>
-          <p>If you manage to break something, tell me about it in #wjmasupport</p>
-          <p>This page will automatically strip offending links of tracking codes, session data, etc.</p>
-        </div>
       </div>
 
       <div class="row" id="linkResults">

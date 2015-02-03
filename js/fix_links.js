@@ -24,6 +24,7 @@ $(document).ready(function() {
     $("#email").selectmenu({width:175});
     $("#product").selectmenu();
 	$("#submitKeycode").button();
+	$("#submitlinks").button();
 	
 	//Establishing the datepicker
 	$( "#inlinedate" ).datepicker({
