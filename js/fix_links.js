@@ -17,7 +17,16 @@ $(document).ready(function() {
 	$("#linkResults").hide(); //Sloppily hiding these two divs.
 	$("#productLinks").hide();
 	
+	//Find value of X inputs and store them in an "Original" array. 
+	//Do this before appending utms - you could just spit out "console.log(original[x]). 
+	//Then call this if a keycode is regenerating, restoring product links to the original ones
 	
+		var values = {};
+		$('#productForm input').each(function() {
+    	values[this.name] = this.value;
+		});
+		console.log(values);
+		
 	
 	//Setting up the keycode-generating menus
     $("#list").selectmenu({width:100}); 
@@ -50,7 +59,7 @@ $(document).ready(function() {
 	});
   
   
-	
+				
 	//start checking for valid input
 	$("#inputForm").submit(function() {
 		event.preventDefault();

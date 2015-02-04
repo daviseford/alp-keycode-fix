@@ -16,10 +16,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template 
+    <!-- Custom styles for this template -->
     
     <link href="css/grid.css" rel="stylesheet">
-    -->
 
 
 
@@ -74,17 +73,18 @@
     		<label for="product">Select a Product</label><br>
     			<select name="product" id="product">
       				<option value="USR">Ultimate Self Reliance Mega Manual</option>
+                    <option value="MSR">Medical Self Reliance Mega Manual</option>
+                    <option value="XCOM">Extreme Weather Combo</option>
+                    <option value="LPL">Low Profile Living Manual</option>
+                    <option value="FFL">Freedom Fortress Library</option>
       				<option value="GAB">Great American Blackout</option>
       				<option value="SUB" selected="selected">Digital Newsletter Subscription</option>
       				<option value="PW">Power Whisperer</option>
       				<option value="FOOD">30 Day Emergency Food Reserve</option>
       				<option value="CSG">Colloidal Silver Generator Kit</option>
-      				<option value="LPL">Low Profile Living Manual</option>
       				<option value="EPACK">Emergency Pack</option>
       				<option value="STREK">Sun Trek</option>
-      				<option value="MSR">Medical Self Reliance Mega Manual</option>
                     <option value="CAN">Survival Kit in a Can</option>
-                    <option value="FFL">Freedom Fortress Library</option>
       		    </select>
            </fieldset>
            </center>
@@ -150,7 +150,7 @@
 				<img src="images/click_to_link.png" width="373" height="62">
 			</form> 
 		</div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="instructions">
           <h2>Instructions</h2>
           <p class="text-warning">This script requires a valid keycode. It will not stop you from doing stupid things like bad links, blank spaces, etc. It is very basic.</p>
           <p>You must input a Keycode and at least one link for this tool to work.</p>
@@ -195,7 +195,9 @@
                 
 			</form>
 		</div>
-        <div class="col-md-4"><h4 align="center">These are your results.<h4>
+        <div class="col-md-4"><h4 align="center">
+          <img src="images/results_left_arrow.png" width="299" height="175" alt="Your results will be displayed on the left.">
+          <h4>
         </div>
       </div>
 
@@ -271,7 +273,13 @@
             
             <div class="input-group">
             <span class="input-group-addon" id="addon14">Freedom Fortress Library</span>
-            <input type="text" name="14" class="form-control" aria-describedby="addon14" id="FFL" value="http://www.independentlivingnews.com/video/ffl-video.php" size="50">
+            <input type="text" name="14" class="form-control" aria-describedby="addon14" id="FFL" value="http://www.independentlivingnews.com/video/ffl-vsl.php" size="50">
+            </div>
+            
+            <div class="input-group">
+            <span class="input-group-addon" id="addon15">Extreme Weather Combo - 30 Day Maximum Shelf Life Food Reserve</span>
+            <input type="text" name="15" class="form-control" aria-describedby="addon15" id="XCOM" value="http://www.survivalproshop.com/extreme-weather-combo-30-day-maximum-shelf-life-food-reserve.html" size="50">
+            <span id="clickme">CLICKME</span>
             </div>
             
             </form>
@@ -303,8 +311,8 @@
         <ul>
         			<li>PW - Power Whisperer</li>
                     <li>USR - Ultimate Self Reliance Mega Manual</li>
-      				<li>MSR = Medical Self Reliance Mega Manual</li>
-      				<li>GAB - Great American Blackout</li>
+      				<li>MSR - Medical Self Reliance Mega Manual</li>
+                    <li>GAB - Great American Blackout</li>
       				<li>SUB - Digital Newsletter Subscription</li>
       				<li>CSG - Colloidal Silver Generator Kit</li>
                     <li>CAN - Survival Kit in a Can</li>
@@ -312,6 +320,7 @@
       				<!--<li>GUN - Gun Control Poll</li>-->
       				<li>LPL - Low Profile Living Manual</li>
       				<!--<li>ODD - 97 Covert Tactics to Sidestep Obama Dollar Debacle</li>-->
+                    <li>XCOM - Extreme Weather Combo</li>
                     <li>FOOD - 30 Day Emergency Food Reserve</li>
       				<li>STREK - Sun Trek</li>
                     <li>EPACK - Emergency Pack</li>
