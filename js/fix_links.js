@@ -26,6 +26,42 @@ $(document).ready(function() {
 	//Additionally, it strips existing UTM codes away, which is Kelly-proof (hopefully)
 		
 	
+//	$("#clickme").button();
+//	$("#clickme").click(function(){
+//	//trying some ajax?
+//	$.ajax({
+//  		type: "POST",
+//  		url: "https://mandrillapp.com/api/1.0/messages/send.json",
+//  		data: {
+//    		'key': 'MXTAqFwwNNGZdGtKOzG_Jw',
+//    		'message': {
+//      			'from_email': 'digitalmedia@wjmassociates.com',
+//      			'to': [
+//          		{
+//            		'email': 'dford@wjmassociates.com',
+//            		'name': 'RECIPIENT NAME (OPTIONAL)',
+//            		'type': 'to'
+//          		},
+//          		{
+//            		'email': 'daviseford@gmail.com',
+//            		'name': 'ANOTHER RECIPIENT NAME (OPTIONAL)',
+//            		'type': 'to'
+//          		}
+//        	],
+//      'autotext': 'true',
+//      'subject': 'YOUR SUBJECT HERE!',
+//      'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+//    		}}
+// 		}).done(function(response) {
+//   			console.log(response); // if you're into that sorta thing
+// 		});
+//	});
+	
+	
+	
+	
+	
+	
 	//Setting up the keycode-generating menus
     $("#list").selectmenu({width:100}); 
     $("#email").selectmenu({width:175});
