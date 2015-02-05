@@ -101,15 +101,12 @@ $(document).ready(function() {
 		} 
 		else {
 			if($("#link1").val() == "" && $("#ProductInput").val() == "") {
-				alert("You must enter at least one link! That's pretty obvious, at least to my primitive computer brain.");
-			}
+				alert("You must enter at least one link!");
+		}
 			else {
 			//Trim old STML, UTM, and HTML codes.	
 			$("#inputForm input").each(stmlCheckFunc); //This trims #inputForm - which in turn takes care of #linkResults
 			$("#productForm input").each(stmlCheckFunc); //This takes care of the product links, which previously were being stacked with multiple utm codes.
-			
-			$("#linkResults").show("drop"); //Show our results.
-			$("#productLinks").show("drop");
 			
 			
 			var keycode = $.trim($("#keycodefield").val()); //Establishing our keycode.
@@ -142,6 +139,10 @@ $(document).ready(function() {
 			if($("#ProductInput").val() != "") {
 				$("#ProductOutput").val($("#ProductInput").val()+utmsource);
 			}
+			
+			$("#linkResults").show("drop"); //Show our results.
+			$("#productLinks").show("drop");
+			
 			}
 		}
 		
