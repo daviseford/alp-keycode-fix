@@ -29,23 +29,25 @@
     <div class="container">
 
       <div class="page-header">
-        <h1>ALP Link Checker</h1>
+        <center><h1>ALP Link Checker</h1><br>
+        <p class="visible-xs">By Davis Ford 2015</p>
+        </center>
       </div>
       
       <!--
       Instructions
-      -->
+      -->      
       <div class="row">
-      <div class="col-lg-3"><center>STEP 1</center></div>
-      <div class="col-lg-2"><center>STEP 2</center></div>   
-      <div class="col-lg-2"><center>STEP 3</center></div>  
-      <div class="col-lg-5"><center>STEP 4</center></div>
-      </div>
-      
-      <div class="row">
-       <div class="col-lg-3" id="inlinedate"></div>
-          <div class="col-lg-2">    
-          <center>  
+             
+       <div class="col-md-3 col-sm-12 col-xs-12">
+       	<center>STEP 1<br>
+       		<span id="inlinedate"></span>
+       	</center>
+       </div>
+       
+       
+          <div class="col-md-2 col-sm-6 col-xs-6">    
+          <center>STEP 2<br>
           <form id="keycodeForm" action="#">
   			<fieldset>
   				<label for="list">Select a List</label><br>
@@ -55,8 +57,9 @@
    				 	</select>
                     </center>
           </div>
-          <div class="col-lg-2">
-          	<center>
+          
+          <div class="col-md-2 col-sm-6 col-xs-6">
+          	<center>STEP 3<br>
    			<label for="email">Select an Email</label><br>
     			<select name="email" id="email">
         			<option value="DB" selected="selected">Daily Bulletin</option>
@@ -65,8 +68,9 @@
     			</select>
             </center>
     		</div>
-    		<div class="col-lg-5">
-            <center>
+            
+    		<div class="col-md-5 cl-xs-12">
+            <center>STEP 4<br>
     		<label for="product">Select a Product</label><br>
     			<select name="product" id="product">
       				<option value="USR">Ultimate Self Reliance Mega Manual</option>
@@ -88,21 +92,19 @@
            <br>
            <center>STEP 5<br>
            <input type="submit" value="Generate Keycode" id="submitKeycode"><br>
-           <img src="images/click_here_up.png" width="104" height="69">
+           <img src="images/click_here_up.png" width="104" height="69" alt="">
            </center><br>
-          <!-- Not using this at the moment.
-          <span id="clickme">CLICKME</span> -->
 		</form>  		
-          </div>
+         </div>
        </div>
       
       
       <div class="container-fluid">
-      	<center>The above generator is not necessary, but you'll probably want to use it</center>
+      	<center><p class="alert-info">The above generator is not necessary, but you'll probably want to use it</p></center>
       </div>
       
       <div class="row" id="origLink">
-        <div class="col-md-8">        
+        <div class="col-md-8 col-xs-12">        
         	<h2>Paste your links here</h2>
       		<p>Assemble your keycode above, or manually type it here. Add any links that you would like to add tracking codes to, and click &quot;Submit.&quot;</p>
             
@@ -110,45 +112,45 @@
         	<form id="inputForm">
 				<div class="form-group">
 				<label for="keycodefield">Keycode: </label>
-                <input type="text" name="keycode" id="keycodefield"> 
-                	<span id="keycodeOutput" class="alert-danger">
-                		Generate a keycode above and it will appear here.
+                <input type="text" name="keycode" id="keycodefield">
+                	<span id="keycodeOutput" class="alert-danger hidden-sm">
+                		Generate a keycode above.
                 	</span>
                 </div>
                                
 				<div class="form-group">
 					<label for="link1">Link #1: </label>
-                	<input type="text" name="link1" id="link1" size="75">
+                	<input type="text" name="link1" id="link1">
                 </div>
                 
 				<div class="form-group">
 					<label for="link2">Link #2: </label>
-                	<input type="text" name="link2" id="link2" size="75"> 
+                	<input type="text" name="link2" id="link2"> 
                 </div>
                 
                 <div class="form-group">
 					<label for="link3">Link #3: </label>
-                	<input type="text" name="link3" id="link3" size="75"> 
+                	<input type="text" name="link3" id="link3"> 
                 </div>
                 
                 <div class="form-group">
 					<label for="link4">Link #4: </label>
-                	<input type="text" name="link4" id="link4" size="75"> 
+                	<input type="text" name="link4" id="link4"> 
                 </div>
                 
                 <div class="form-group">
 					<label for="link5">Link #5: </label>
-                	<input type="text" name="link5" id="link5" size="75"> 
+                	<input type="text" name="link5" id="link5"> 
                 </div>
                 
                 <div class="form-group">
 					<label for="ProductInput">Product: </label>
-                	<input type="text" name="link6" id="ProductInput" size="75"> 
+                	<input type="text" name="link6" id="ProductInput"> 
                 </div>
                 
                 <br>
 				<input type="submit" value="Generate Links" id="submitlinks">
-				<img src="images/click_to_link.png" width="373" height="62">
+				<img src="images/click_to_link.png" width="373" height="62"  class="hidden-xs" alt="">
 			</form> 
 		</div>
         <div class="col-md-4" id="instructions">
@@ -197,9 +199,8 @@
                 
 			</form>
 		</div>
-        <div class="col-md-4"><h4 align="center">
+        <div class="col-md-4">
           <img src="images/results_left_arrow.png" width="299" height="175" alt="Your results will be displayed on the left.">
-          <h4>
         </div>
       </div>
 
@@ -209,78 +210,78 @@
          <form id="productForm">
          	<div class="input-group">
          	<span class="input-group-addon" id="addon1">Ultimate Self Reliance Mega Manual</span>
-            <input type="text" id="USR" name="1" value="http://www.independentlivingnews.com/video/usr-video-3p.php" size="50" class="form-control" aria-describedby="addon1">
+            <input type="text" id="USR" name="1" value="http://www.independentlivingnews.com/video/usr-video-3p.php"  class="form-control" aria-describedby="addon1">
             </div>
             
             <div class="input-group">
             <span class="input-group-addon" id="addon2">Great American Blackout</span>
-            <input type="text" name="2" id="GAB" class="form-control" aria-describedby="addon2" value="http://www.independentlivingnews.com/video/great-american-blackout-ihnp.php" size="50">
+            <input type="text" name="2" id="GAB" class="form-control" aria-describedby="addon2" value="http://www.independentlivingnews.com/video/great-american-blackout-ihnp.php">
             </div>
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon3">Digital Newsletter Subscription</span>
-            <input type="text" name="3" class="form-control" aria-describedby="addon3" id="SUB" value="http://www.independentlivingnews.com/signup/membership.stml" size="50">
+            <input type="text" name="3" class="form-control" aria-describedby="addon3" id="SUB" value="http://www.independentlivingnews.com/signup/membership.stml">
             
             </div>
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon4">Power Whisperer</span>
-            <input type="text" name="4" class="form-control" aria-describedby="addon4" id="PW" value="http://www.independentlivingnews.com/video/pw-vsl.php" size="50">
+            <input type="text" name="4" class="form-control" aria-describedby="addon4" id="PW" value="http://www.independentlivingnews.com/video/pw-vsl.php">
             </div>
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon5">30 Day Emergency Food Reserve</span>
-            <input type="text" name="5" class="form-control" aria-describedby="addon5" id="FOOD" value="http://www.independentlivingnews.com/video/comfort-food-reserve.php" size="50">
+            <input type="text" name="5" class="form-control" aria-describedby="addon5" id="FOOD" value="http://www.independentlivingnews.com/video/comfort-food-reserve.php">
             </div>
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon6">Colloidal Silver Generator Kit</span>
-            <input type="text" name="6" class="form-control" aria-describedby="addon6" id="CSG" value="https://www.independentlivingnews.com/video/csg-video.php" size="50">
+            <input type="text" name="6" class="form-control" aria-describedby="addon6" id="CSG" value="https://www.independentlivingnews.com/video/csg-video.php">
             </div>
             
             <!--<div class="input-group">
 			<span class="input-group-addon" id="addon7">Gun Control Poll</span>
-            <input type="text" name="7" class="form-control" aria-describedby="addon7" id="GUN" value="http://www.independentlivingnews.com/poll/gun-control/poll.php" size="50">
+            <input type="text" name="7" class="form-control" aria-describedby="addon7" id="GUN" value="http://www.independentlivingnews.com/poll/gun-control/poll.php">
             </div>-->
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon8">Low Profile Living Manual</span>
-            <input type="text" id="LPL" class="form-control" aria-describedby="addon8" name="8"  value="http://www.independentlivingnews.com/video/lpl-video.php" size="50">
+            <input type="text" id="LPL" class="form-control" aria-describedby="addon8" name="8"  value="http://www.independentlivingnews.com/video/lpl-video.php">
             </div>
             
            <!-- <div class="input-group">
 			<span class="input-group-addon" id="addon9">97 Covert Tactics to Sidestep Obama Dollar Debacle</span>
-            <input type="text" name="9" class="form-control" aria-describedby="addon9" id="ODD" value="http://www.independentlivingnews.com/il/obama-dollar-debacle.php" size="50">
+            <input type="text" name="9" class="form-control" aria-describedby="addon9" id="ODD" value="http://www.independentlivingnews.com/il/obama-dollar-debacle.php">
             </div>-->
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon10">Emergency Pack</span>
-            <input type="text" name="10" class="form-control" aria-describedby="addon10" id="EPACK"  value="http://www.independentlivingnews.com/video/epack2-video.php" size="50">
+            <input type="text" name="10" class="form-control" aria-describedby="addon10" id="EPACK"  value="http://www.independentlivingnews.com/video/epack2-video.php">
             </div>
             
             <div class="input-group">
 			<span class="input-group-addon" id="addon11">Sun Trek</span>
-            <input type="text" name="11" class="form-control" aria-describedby="addon11" id="STREK" value="http://www.independentlivingnews.com/video/suntrek/" size="50">
+            <input type="text" name="11" class="form-control" aria-describedby="addon11" id="STREK" value="http://www.independentlivingnews.com/video/suntrek/">
             </div>
             
             <div class="input-group">
             <span class="input-group-addon" id="addon12">Medical Self Reliance</span>
-            <input type="text" name="12" class="form-control" aria-describedby="addon12" id="MSR" value="http://www.survivalproshop.com/publications/medical-self-reliance-mega-manual.html" size="50">
+            <input type="text" name="12" class="form-control" aria-describedby="addon12" id="MSR" value="http://www.survivalproshop.com/publications/medical-self-reliance-mega-manual.html">
             </div>
             
             <div class="input-group">
             <span class="input-group-addon" id="addon13">Survival Kit in a Can</span>
-            <input type="text" name="13" class="form-control" aria-describedby="addon13" id="CAN" value="http://www.survivalproshop.com/survival-essentials/survival-kit-in-a-can.html" size="50">
+            <input type="text" name="13" class="form-control" aria-describedby="addon13" id="CAN" value="http://www.survivalproshop.com/survival-essentials/survival-kit-in-a-can.html">
             </div>
             
             <div class="input-group">
             <span class="input-group-addon" id="addon14">Freedom Fortress Library</span>
-            <input type="text" name="14" class="form-control" aria-describedby="addon14" id="FFL" value="http://www.independentlivingnews.com/video/ffl-vsl.php" size="50">
+            <input type="text" name="14" class="form-control" aria-describedby="addon14" id="FFL" value="http://www.independentlivingnews.com/video/ffl-vsl.php">
             </div>
             
             <div class="input-group">
             <span class="input-group-addon" id="addon15">Extreme Weather Combo</span>
-            <input type="text" name="15" class="form-control" aria-describedby="addon15" id="XCOM" value="http://www.survivalproshop.com/extreme-weather-combo-30-day-maximum-shelf-life-food-reserve.html" size="50">
+            <input type="text" name="15" class="form-control" aria-describedby="addon15" id="XCOM" value="http://www.survivalproshop.com/extreme-weather-combo-30-day-maximum-shelf-life-food-reserve.html">
             
             </div>
             
@@ -288,7 +289,7 @@
         </div>
       </div>
 	<div class="row" id="help">
-        <div class="col-md-6">
+        <div class="col-md-6 hidden-sm hidden-xs">
       		<h3>Why do I need to use this?</h3>
 			<p>ALP uses UTM codes to track how people arrive at their website. You don't need to understand UTM codes to use this, but here's a quick example. Imagine you've placed an ad in a magazine for your product. </p>
 			<p>You want to track the effectiveness of that ad. What's the easiest way to do that?</p>
@@ -297,22 +298,23 @@
 			<p>When you fill out the form above and click "Submit," the Keycode will be automatically inserted into the link - saving you valuable time.</p>
 			<p> Later, we can use this link to examine how traffic is entering our website - this helps us pinpoint high-performing emails.</p>
        </div>
-		<div class="col-md-6">
-        <ul><h3>Legend</h3>
-        <ul>Lists:
+		<div class="col-md-6 col-xs-12">
+        <h3>Legend</h3>
+        <ul>
+        <li>Lists:
         <ul>
         	<li>ILN - Independent Living News</li>
             <li>RFAR - Ready For Anything Report</li>
             </ul>
-        </ul>
-        <ul>Emails:
+        </li>
+        <li>Emails:
         <ul>
         	<li>DB - Daily Bulletin</li>
             <li>SL - Sales Letter</li>
             <li>MR - Must Read</li>
             </ul>
-        </ul>    
-        <ul>Products:
+        </li>    
+        <li>Products:
         <ul>
         			<li>PW - Power Whisperer</li>
                     <li>USR - Ultimate Self Reliance Mega Manual</li>
@@ -330,8 +332,8 @@
                     <!--<li>GUN - Gun Control Poll</li>-->
                     <!--<li>ODD - 97 Covert Tactics to Sidestep Obama Dollar Debacle</li>-->
                     </ul>
+                    </li>
                     </ul>
-                 </ul>
         </div>
 	</div>
     <div class="row">
@@ -339,7 +341,6 @@
         <p class="caption"><center>Developed by Davis Ford 2015</center></p>
         </div>
     </div> <!-- /container -->
-
 
   </body>
   <footer>

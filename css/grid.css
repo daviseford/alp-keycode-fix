@@ -33,3 +33,18 @@
 	border: 3px #ff6600 solid;
 	
 }
+
+#inputForm input[type=text]{
+	width: 90%;	
+}
+
+#results input[type=text]{
+	width: 90%;	
+}
+
+#productForm input[type=text]{
+	width: 100%;		
+}
+#keycodefield{
+	width: 12em !important;
+}
