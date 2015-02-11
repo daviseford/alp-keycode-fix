@@ -6,7 +6,7 @@ $(document).ready(function() {
 	
 	
 	function stmlCheckFunc(){
-		var inputVal = $.trim($(this).val())
+		var inputVal = $.trim($(this).val());
 			if(S(inputVal).contains('.stml')) {
 				var splitSTML = $.trim($(this).val().split('.stml')[0]); //split the value into two parts of an array. 
 				$(this).val(splitSTML+".stml");	//re-add the .stml ending

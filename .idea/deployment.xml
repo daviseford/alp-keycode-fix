@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Link Fixer">
+    <serverData>
+      <paths name="Link Fixer">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/vhosts/daviseford.com/sites/default/files/ALP_link_fixer" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
