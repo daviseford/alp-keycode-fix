@@ -21,47 +21,11 @@ $(document).ready(function() {
 				console.log("Fixed string with utmCheck"); //Not necessary, just for keeping track
 				}
 			
-	}; 
+	}
 	//The stmlCheckFunc scrubs links of anything extending past .html and .stml endings.
 	//Additionally, it strips existing UTM codes away, which is Kelly-proof (hopefully)
 		
-	
-//	$("#clickme").button();
-//	$("#clickme").click(function(){
-//	//trying some ajax?
-//	$.ajax({
-//  		type: "POST",
-//  		url: "https://mandrillapp.com/api/1.0/messages/send.json",
-//  		data: {
-//    		'key': 'MXTAqFwwNNGZdGtKOzG_Jw',
-//    		'message': {
-//      			'from_email': 'digitalmedia@wjmassociates.com',
-//      			'to': [
-//          		{
-//            		'email': 'dford@wjmassociates.com',
-//            		'name': 'RECIPIENT NAME (OPTIONAL)',
-//            		'type': 'to'
-//          		},
-//          		{
-//            		'email': 'daviseford@gmail.com',
-//            		'name': 'ANOTHER RECIPIENT NAME (OPTIONAL)',
-//            		'type': 'to'
-//          		}
-//        	],
-//      'autotext': 'true',
-//      'subject': 'YOUR SUBJECT HERE!',
-//      'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
-//    		}}
-// 		}).done(function(response) {
-//   			console.log(response); // if you're into that sorta thing
-// 		});
-//	});
-	
-	
-	
-	
-	
-	
+
 	//Setting up the keycode-generating menus
     $("#list").selectmenu({width:100}); 
     $("#email").selectmenu({width:175});
@@ -77,10 +41,10 @@ $(document).ready(function() {
   	//This handles generating the keycode. It simply joins all of the necessary values from an array.
   	$("#keycodeForm").submit(function() { 
 		event.preventDefault(); //Stops the page from reloading
-		keycodeGeneration = [$("#inlinedate").val(),$("#list").val(),$("#email").val(),$("#product").val()]; 	
+		var keycodeGeneration = [$("#inlinedate").val(),$("#list").val(),$("#email").val(),$("#product").val()];
 		//This array stores our Keycode values, to be used shortly.
 		$("#submitKeycode").button({label: "Keycode Generated!"}); //Change button label to reflect generation
-		$("#keycodeOutput").removeClass("alert-danger").effect("highlight", "slow").addClass("alert-success").text("Generated Keycode: "+keycodeGeneration.join(""));
+		$("#keycodeOutput").removeClass("alert-danger").addClass("alert-success").text("Generated Keycode: "+keycodeGeneration.join("")).effect("highlight", "slow");
 		$("#keycodefield").val(keycodeGeneration.join(""));
 		
 		var currProduct = $.trim(document.getElementById(keycodeGeneration[3]).value); 
