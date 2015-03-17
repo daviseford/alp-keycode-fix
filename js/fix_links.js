@@ -27,8 +27,8 @@ $(document).ready(function() {
 		
 
 	//Setting up the keycode-generating menus
-    $("#list").selectmenu({width:100}); 
-    $("#email").selectmenu({width:175});
+    $("#list").selectmenu({width:200});
+    $("#email").selectmenu({width:200});
     $("#product").selectmenu();
 	$("#submitKeycode").button();
 	$("#submitlinks").button();
